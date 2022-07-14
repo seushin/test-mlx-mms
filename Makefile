@@ -21,11 +21,11 @@ endif
 .PHONY: all clean fclean re
 
 test:
-	$(MAKE) re
-	echo "put texture to window"
+	@$(MAKE) -s re
+	@echo "----- put texture to window ------"
 	./$(NAME)
-	$(MAKE) re USE_IMG=1
-	echo "put texture to img buffer"
+	@$(MAKE) -s re USE_IMG=1
+	@echo "----- put texture to img buffer ------"
 	./$(NAME)
 
 all: $(NAME)
